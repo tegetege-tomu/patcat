@@ -1,0 +1,22 @@
+# macOS garbage
+.DS_Store
+
+# C/C++ build artifacts
+*.o
+*.obj
+*.out
+*.dSYM/
+
+# Libraries
+*.a
+*.so
+*.dylib
+
+# Temporary/editor files
+*.swp
+*.swo
+*~
+
+# Common build directories
+build/
+out/
