@@ -21,8 +21,9 @@ set trigger mode - button 3: zero AT at note-on; current AT at note-on
 MIDI panic - button 2: send all notes off, all AT off
 
 
-## ARCHITECTURE
+# ARCHITECTURE
 
+````
 MIDI IN
   |
   ↓
@@ -34,3 +35,4 @@ Router ─┬-→ pass-through queue ─┐
         └-→ Translator ─────────┘
                   │
                   └─ HeldNotes set, pending pressure
+````
