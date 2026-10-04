@@ -12,16 +12,26 @@ First things first, to get off my chest, MIDI is an incredibly frustrating and a
 
 ## BUTTONS
 
-enter settings - chord of 1 & 3
+enable/ disable patcat - chord of 1 & 3, long-press
 
-set sustain mode - button 1: AT max; AT lock; AT independent
+enter/ leave settings - chord of 2 & 3, long-press
 
-set trigger mode - button 3: zero AT at note-on; current AT at note-on
+toggle sustain on/ off - button 1, long-press: AT sustain; AT independent
+ 
+toggle sustain type - chord of 1 & 2: AT max; AT lock
 
-MIDI panic - button 2: send all notes off, all AT off
+toggle note thru - button 2, long-press: AT only; AT + note thru 
+
+toggle trigger mode - button 3, long-press: zero AT at note-on; current AT at note-on
+
+MIDI panic (quick) - button 2, short-press: send all notes off, all AT off
+
+MIDI panic (full) - button 2, long-press: force all notes off (long cycle)
 
 
-# ARCHITECTURE
+
+
+## ARCHITECTURE
 
 ````
 MIDI IN
