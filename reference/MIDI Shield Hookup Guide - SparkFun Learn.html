@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WLMFVVN');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- mobile mode if small screen device -->
+    
+    <title>MIDI Shield Hookup Guide - SparkFun Learn</title>
+
+          <link rel="canonical" href="https://learn.sparkfun.com/tutorials/midi-shield-hookup-guide/all">
+            
+    <link href="/css/bootstrap.min.css?rev=1782850282" rel="stylesheet">
+    <link rel="stylesheet" href="/css/theme.github.css?rev=1782850282" type="text/css" media="screen" />    <link rel="alternate" type="application/atom+xml" title="Education Blog" href="https://learn.sparkfun.com/feeds/blog" />
+    <link rel="alternate" type="application/atom+xml" title="Tutorials" href="https://learn.sparkfun.com/feeds/tutorials" />
+    <link rel="alternate" type="application/atom+xml" title="Education Blog Comments" href="https://learn.sparkfun.com/feeds/blog_comments" />
+    <link rel="alternate" type="application/atom+xml" title="Tutorial Comments" href="https://learn.sparkfun.com/feeds/tutorial_comments" />
+  </head>
+
+  <body id=learn class="layout-default no-type tutorials-view" ontouchstart="">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLMFVVN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <script>;</script>
+    <div class="wrapper" itemscope itemtype="http://schema.org/WebSite">
+      <meta itemprop="url" content="https://learn.sparkfun.com/">
+      <div class=wrapper-inner>
+
+    <header>
+  <div class="support-nav-container container-fluid hidden-xs">
+    <div class="container">
+      <div class="support-nav">
+        <div aria-hidden="true">&nbsp;</div>
+
+        <div>
+          <ul class="professional-links">
+            <li><a href="https://www.sparkfun.com/professional">Professional</a></li>
+            <li><a href="https://www.sparkfun.com/education">EDU</a>            <li><a href="https://www.sparkfun.com/become-a-distributor">Distributor</a>          </ul>
+        </div>
+
+        <div class="cs">
+          <a href="https://www.sparkfun.com/support">Customer Support</a>        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="top-nav-buttons container-fluid hidden-xs">
+    <div class="container">
+      <div class="tab-bar">
+        <ul class="tab-navigation" aria-label="sparkfun.com navigation">
+  <li><a href="https://www.sparkfun.com/">Shop</a></li>
+  <li class="active"><a href="https://learn.sparkfun.com/">Documentation</a></li>
+  <li class=""><a href="https://news.sparkfun.com/">News</a></li>
+</ul>
+
+<ul class="sale-links" aria-label="Deals and special interests">
+  <li><a href="https://www.sparkfun.com/todays-deals"><span class="icon-header icon-header-sale" aria-hidden="true"></span>Today's Deals</a></li>
+  <li><a href="https://community.sparkfun.com/" target="_blank"><span class=" icon-header icon-header-community" aria-hidden="true"></span>Community</a></li>
+  <li><a class="sparkx" href="https://www.sparkpnt.com"><span class="logo-spark-pnt-primary"><span class="sr-only">SparkPNT (Position, Navigation & Timing)</span></span></a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="header-content">
+      <div class="logo-container">
+        <button id="mobile-nav-menu-trigger" class="mobile-menu-button btn-unstyled hidden-sm hidden-md hidden-lg" type="button" aria-label="Open navigation menu">
+          <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        </button>
+
+        <a class="logo" href="https://www.sparkfun.com/">
+          <span class="logo-sfe-primary"><span class="visuallyhidden">SparkFun Electronics - sparkfun.com</span></span>
+        </a>
+      </div>
+
+      <div class="search-block">
+                  <form id="search_form" class="search-block-form" action="https://learn.sparkfun.com/search/results" method="get">
+            <label for="global-search" class="sr-only">search documentation</label>
+            <input name="term" id="global-search" class="form-control" type="text" value="" placeholder="search documentation" autocomplete="off">
+            <button type="submit" class="glyphicon glyphicon-search global-search-icon" aria-label="Search"></button>
+          </form>
+        
+        <a href="https://www.sparkfun.com/" class="hidden-xs">Back to Webstore<span class="icon-header icon-header-undo" aria-hidden="true"></span></a>
+      </div>
+
+        <a class="account-link" href="https://www.sparkfun.com/customer/account">
+          <span class="img-account-silhouette visible-xs-inline-block"><span class="sr-only">My Account</span></span>
+          <span class="hidden-xs">My Account</span>
+        </a>
+
+    </div>
+  </div>
+
+  <div class="header-nav container-fluid hidden-xs">
+    <div class="container">
+      <ul class="nav-product-categories" aria-label="Featured product categories">
+  <li><a href="https://www.sparkfun.com/featured">Featured <span class="sr-only">Products</span></a></li>
+  <li><a href="https://www.sparkfun.com/gnss">GPS/GNSS</a></li>
+  <li><a href="https://www.sparkfun.com/sensors">Sensors</a></li>
+  <li><a href="https://www.sparkfun.com/development-boards">Development Boards</a></li>
+  <li class="header-nav-iot"><a href="https://www.sparkfun.com/iot-wireless">IoT & Wireless</a></li>
+  <li class="header-nav-components"><a href="https://www.sparkfun.com/components">Components</a></li>
+  <li class="header-nav-kits"><a href="https://www.sparkfun.com/kits">Kits</a></li>
+  <li class="all-cat"><a href="https://www.sparkfun.com/all-categories"><span class="visible-xs-inline">Shop </span>All <span class="sr-only">Product</span> Categories</a></li>
+</ul>
+    </div>
+  </div>
+  <div id="nav-mobile-menu" class="nav-mobile-menu" aria-labelledby="nav-mobile-menu-heading" aria-role="dialog" aria-modal="true">
+    <h2 id="nav-mobile-menu-heading" class="sr-only">Navigation menu</h2>
+    <ul class="mobile-menu-tabs">
+      <li class="active"><a>Menu</a></li>
+      <li><a href="https://www.sparkfun.com/customer/account">Account</a></li>
+    </ul>
+    <ul class="nav-product-categories" aria-label="Featured product categories">
+  <li><a href="https://www.sparkfun.com/featured">Featured <span class="sr-only">Products</span></a></li>
+  <li><a href="https://www.sparkfun.com/gnss">GPS/GNSS</a></li>
+  <li><a href="https://www.sparkfun.com/sensors">Sensors</a></li>
+  <li><a href="https://www.sparkfun.com/development-boards">Development Boards</a></li>
+  <li class="header-nav-iot"><a href="https://www.sparkfun.com/iot-wireless">IoT & Wireless</a></li>
+  <li class="header-nav-components"><a href="https://www.sparkfun.com/components">Components</a></li>
+  <li class="header-nav-kits"><a href="https://www.sparkfun.com/kits">Kits</a></li>
+  <li class="all-cat"><a href="https://www.sparkfun.com/all-categories"><span class="visible-xs-inline">Shop </span>All <span class="sr-only">Product</span> Categories</a></li>
+</ul>
+    <ul class="tab-navigation" aria-label="sparkfun.com navigation">
+  <li><a href="https://www.sparkfun.com/">Shop</a></li>
+  <li class="active"><a href="https://learn.sparkfun.com/">Documentation</a></li>
+  <li class=""><a href="https://news.sparkfun.com/">News</a></li>
+</ul>
+
+<ul class="sale-links" aria-label="Deals and special interests">
+  <li><a href="https://www.sparkfun.com/todays-deals"><span class="icon-header icon-header-sale" aria-hidden="true"></span>Today's Deals</a></li>
+  <li><a href="https://community.sparkfun.com/" target="_blank"><span class=" icon-header icon-header-community" aria-hidden="true"></span>Community</a></li>
+  <li><a class="sparkx" href="https://www.sparkpnt.com"><span class="logo-spark-pnt-primary"><span class="sr-only">SparkPNT (Position, Navigation & Timing)</span></span></a></li>
+</ul>
+  </div>
+</header>
+
+    
+    <div class=content>
+      <div class=container id=airlock>
+
+        
+        <div class=main-title>
+  <ul class="breadcrumb">
+    <li><a href="https://learn.sparkfun.com/">Home</a></li>
+    <li><a href="https://learn.sparkfun.com/tutorials">Tutorials</a></li>
+    <li>MIDI Shield Hookup Guide</li>
+      </ul>
+
+  <h1>
+    MIDI Shield Hookup Guide  </h1>
+
+</div>
+
+
+<a id=nav_toggle_pages class="nav_toggle nav-toggle-trigger" href="#"><span>&#8801;</span> Pages</a>
+
+<div id=tutorial class="row">
+
+  <div class="col-sm-8" id="sections">
+
+    <div class="contributors">
+                      Contributors:
+                <span class="contributor-alias"><img src="https://cdn.sparkfun.com/avatar/d069e186dea25a3b82d74ef824716693?d=retro&s=20&r=pg" /> Byron J.</span>          </div>
+
+    <div class="share-link-inline">
+
+  <a class="share-link-toggle" href="#">
+    <span class="share-title">
+      <span class="sfe-icon-share"></span>
+      Share    </span>
+  </a>
+
+  <div class="share-link-inner dialog">
+    Use this URL to share:<br>
+    <input class="form-control input-sm" type="text" value="http://sfe.io/t409" onclick="$(this).trigger('select');">
+
+    <div class="share-social">
+
+      <a rel=nofollow onclick="return $(this).sfeutil('track_link',this,'Share','clicked','tumblr');" href="https://www.tumblr.com/share/link?url=http%3A%2F%2Fsfe.io%2Ft409&name=MIDI+Shield+Hookup+Guide" title="Share on Tumblr"><span class="sfe-icon-tumblr hidetext"><span>Share on Tumblr</span></span></a>
+
+      <a rel=nofollow onclick="return $(this).sfeutil('track_link',this,'Share','clicked','reddit');" href="https://www.reddit.com/submit?url=http%3A%2F%2Fsfe.io%2Ft409" title="Submit to reddit"><span class="sfe-icon-reddit hidetext"><span>Submit to reddi</span></span></a>
+
+    </div>
+
+    </div>
+  
+  <div class="share-social">
+
+    <a rel=nofollow onclick="return $(this).sfeutil('track_link',this,'Share','clicked','twitter');" href="https://twitter.com/intent/tweet?text=MIDI+Shield+Hookup+Guide&url=http%3A%2F%2Fsfe.io%2Ft409&via=sparkfun" title="Share on Twitter"><span class="sfe-icon-twitter hidetext"><span>Share on Twitter</span></span></a>
+
+    <a rel=nofollow onclick="return $(this).sfeutil('track_link',this,'Share','clicked','facebook');" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fsfe.io%2Ft409&t=MIDI+Shield+Hookup+Guide" title="Share on Facebook"><span class="sfe-icon-facebook-nobox hidetext"><span>Share on Facebook</span></span></a>
+
+          <a rel=nofollow onclick="return $(this).sfeutil('track_link',this,'Share','clicked','pinterest');" href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fsfe.io%2Ft409&media=https%3A%2F%2Fcdn.sparkfun.com%2F%2Fr%2F500-1000%2Fassets%2Flearn_tutorials%2F4%2F0%2F9%2Fproduct-in-use.jpg&description=MIDI+Shield+Hookup+Guide" title="Pin It"><span class="sfe-icon-pinterest hidetext"><span>Pin It</span></span></a>
+    
+  </div>
+
+  
+</div>
+
+          <div class="section tutorial-page">
+        <h2 id="introduction">Introduction</h2>
+        <p>The Sparkfun <a href="https://www.sparkfun.com/products/12898">MIDI Shield</a> allows you to add MIDI ports to your R3-compatible Arduino board.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/product-in-use.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/product-in-use.jpg" alt="MIDI Shield In Use" /></a> </div></p>
+
+<p>The shield provides the standard MIDI port circuits, including 5-pin DIN connectors and an opto-isolated MIDI input.  The shield also has some extra input and output devices.  It had LEDs on D6 and D7, pushbuttons on D2, D3 and D4, and rotary potentiometers on A0 and A1.</p>
+
+<p>The V1.5 revision also adds several configurable features, such as converting the MIDI output to a MIDI thru, and the option to use a <a href="https://www.arduino.cc/en/Reference/SoftwareSerial">software serial</a> port for MIDI, leaving the hardware serial for programming and debugging.  It also buffers the output, making it compatible with the <a href="https://www.sparkfun.com/products/10915">Arduino Pro</a> without needing to circumvent the protection resistors on the serial TX and RX lines.</p>
+
+<p>This guide will show you how to put the shield together, then explore several example projects, demonstrating how you can apply MIDI to your projects.</p>
+
+<h3>Suggested Reading</h3>
+
+<ul>
+<li>If you're new to MIDI, our <a href="https://learn.sparkfun.com/tutorials/midi-tutorial">MIDI Tutorial</a> should help you get up to speed.</li>
+<li>We're going to use the <a href="https://github.com/FortySevenEffects/arduino_midi_library">47 Effects MIDI Library</a> as the heart of the example projects.</li>
+</ul>      </div>
+          <div class="section tutorial-page">
+        <h2 id="assembly">Assembly</h2>
+        <p>Before assembling your MIDI shield, consider how you're going to use it.  If you don't need  buttons and potentiometers, you can leave them off.  Similarly, if you only need the MIDI input or output port, you can leave the other port off.  Finally, there are a couple of options for headers -- you can select headers that fit your application.</p>
+
+<h3>Materials</h3>
+
+<p>The MIDI shield kit contains the following parts.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/assem-parts.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/assem-parts.jpg" alt="kit parts" /></a> </div></p>
+
+<ul>
+<li>The MIDI Shield PCB</li>
+<li>2x 5-pin DIN conectors</li>
+<li>2x 10K rotary potentiometer</li>
+<li>3x 12mm tactile pushbutton switches</li>
+</ul>
+
+<p>You'll also need to select headers that fit your application.</p>
+
+<ul>
+<li>You can use the <a href="https://www.sparkfun.com/products/11417">R3 stackable header kit</a>, but they're a bit tall and make the buttons hard to reach.</li>
+<li>If you're using an Arduino board that predates R3, such as the <a href="https://www.sparkfun.com/products/10915">Arduino Pro</a>, you can use the regular <a href="https://www.sparkfun.com/products/10007">stackable header kit</a>.</li>
+<li>Alternately, you can use regular <a href="https://www.sparkfun.com/products/116">snappable headers</a>, which don't stick as far above the board, leaving plenty of room to access the switches and potentiometers.</li>
+</ul>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/assem-headers.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/assem-headers.jpg" alt="Pick your headers" /></a> </div></p>
+
+<p><div class="center-block text-center"> <em>Stackable Headers (left) and Snappable Headers</em> </div></p>
+
+<h3>Tools</h3>
+
+<p>The following tools are recommended.</p>
+
+<ul>
+<li>A <a href="https://www.sparkfun.com/products/11704">soldering iron</a> with a fine-point tip.</li>
+<li>Some solder,  either <a href="https://www.sparkfun.com/products/9161">leaded</a> or <a href="https://www.sparkfun.com/products/9325">lead-free</a>.</li>
+<li>A magnifying glass or <a href="https://www.sparkfun.com/products/9316">loupe</a>.</li>
+<li>A <a href="https://www.sparkfun.com/products/10410">vise</a> to hold the PCB as you work.</li>
+</ul>
+
+<h3>Building The MIDI Shield</h3>
+
+<p>If you're using stackable headers, they're easiest to put on at the very beginning (if you're using the snappable headers, we'll save them until the end).  To install the stackable headers, put them through the board from the top side</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/assem-stacking_1.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/assem-stacking_1.jpg" alt="Stacking headers Insertion" /></a> </div></p>
+
+<p>Then flip the board over so it's supported by the bodies of the headers.  Adjust the alignment until the headers stand squarely in your work surface, and solder them in place.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/assem-stacking-solder.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/assem-stacking-solder.jpg" alt="Stacking Headers Soldered In" /></a> </div></p>
+
+<p>Next, we'll install the components on the top of the board in order from the shortest to the tallest.  We'll start with the pushbuttons -- snap them through the holes, then solder them in place.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/assem-buttons.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/assem-buttons.jpg" alt="Button Insertion" /></a> </div></p>
+
+<p>Following that, install the MIDI jacks, taking care to keep them seated to the PCB while you solder.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/assem-ports.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/assem-ports.jpg" alt="MIDI Sockets" /></a> </div></p>
+
+<p>As the tallest component, the potentiometers go on next.  Getting them into the PCB can take some effort -- you might need to nudge the tabs a little bit to get them through the board.  Before you solder, doublecheck that the shafts are perpendicular to the surface of the board, because it takes a lot of desoldering effort to straighten them if they're crooked.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/assem-pots.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/assem-pots.jpg" alt="Install Potentiometer" /></a> </div></p>
+
+<p>Finally, if you're using snappable headers instead of the stacking ones, install them.  It's easiest if you use an Arduino board as an assembly jig.  Snap the headers into suitable lengths (6, 8, 8 and 10 for an R3 board), and push them into the sockets on the Arduino. Then lay the MIDI shield PCB over them, as shown below.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/assem-snappable.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/assem-snappable.jpg" alt="Fixture for Snappable Headers" /></a> </div></p>
+
+<p>Solder them from the top of the board.</p>
+
+<h3>In Operation</h3>
+
+<p>One it's assembled, place the MIDI shield on top of your Arduino, then connect your MIDI devices to the ports.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/product-in-use.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/product-in-use.jpg" alt="MIDI Shield In Use" /></a> </div></p>
+
+<h3>RUN vs. PROG</h3>
+
+<p>There's one last thing to mention: near the MIDI input jack is a small slide switch.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/assem-prog-run.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/assem-prog-run.jpg" alt="Program/Run Switch" /></a> </div></p>
+
+<p>By default, the shield uses the hardware serial port on the Arduino for MIDI communication -- but that port is shared with the bootloader, which is initiated when you press the "load" button in the Arduino IDE.  The switch allows them to share the port politely, avoiding output contention.</p>
+
+<p>If you're using the hardware serial port, set the switch to the PROG position, before you load your sketch.  Once it's loaded and verified, set it back to RUN.</p>
+
+<div class="alert alert-warning" role="alert">
+If you're having trouble loading a sketch, doublecheck that the switch is set to `PROG`!
+</div>
+
+<p>In the next section we'll discuss using a software serial port.  One advantage of software serial is that you don't need to remember to flip the switch every time you load!</p>      </div>
+          <div class="section tutorial-page">
+        <h2 id="configuration">Configuration</h2>
+        <p>The MIDI Shield has a number of solder jumpers on the bottom side, so that it can be customized for different situations.</p>
+
+<p><a name="soft_serial"></a></p>
+
+<h3>Hardware vs. Software Serial Port</h3>
+
+<p>The first set of jumpers are SJ1 and SJ2, near digital pins 10-13.  These allow you to swap between the hardware serial port on pins D0 and D1, or a software serial port on pins 8 and 9.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/cfg-serial.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/cfg-serial.jpg" alt="Serial Selection Jumpers" /></a> </div></p>
+
+<p>By default, these are connected with a copper trace between the center and right-hand pads, selecting the hardware UART.  If you'd rather use the software serial port, cut that trace using a <a href="https://www.sparkfun.com/products/9200">hobby knife</a>, and flow some solder the bridge the center pad to the left one.</p>
+
+<p>Why would you want to do this?  A couple of reasons jump to mind.</p>
+
+<ol>
+<li>If you're using the software serial port for MIDI, the hardware port is still available to the bootloader.  You don't need to toggle the RUN/PROG switch every time you try to load.</li>
+<li>The hardware serial port is still available for other communication.  In particular, you can use <code>Serial.print()</code> statements to debug your code.</li>
+</ol>
+
+<h3>MIDI Out or Thru</h3>
+
+<p>SJ3 is on the bottom of the board, near the center.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/cfg-thru.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/cfg-thru.jpg" alt="Out/Thru Jumper" /></a> </div></p>
+
+<p>It allows the MIDI output port to be repurposed as a MIDI thru.  Instead of being tied to the TX line of the selected serial port, the MIDI out jack will retransmit a copy of bytes that arrive at the input.  If you don't need the MIDI output to transmit data, MIDI thru might be useful, especially if you're daisy chaining MIDI devices.</p>
+
+<p>Like the serial port selection jumpers, the default path is connected with a copper trace.  If you want to switch the jumper, cut the trace, and bridge the other two pads with solder.</p>
+
+<p>The MIDI library we'll be using also has the option to enable software thru functionality.</p>
+
+<h3>Power Over MIDI</h3>
+
+<p>The final set of jumpers is SJ4, 5, 6 and 7.  These are under the MIDI ports and implement for a form of power-over-MIDI.</p>
+
+<div class="alert alert-warning" role="alert">
+<b>Proceed with caution!</b> Power-over-MIDI (or MIDI Phantom Power) isn't part of the MIDI standard, and several vendors have implemented proprietary versions.  Before closing these jumpers, verify the voltages and pinouts of the connected devices!
+</div>
+
+<p>Power over MIDI isn't actually defined by the <a href="http://midi.org/techspecs/">MIDI Standard</a>, and a <a href="http://www.midisolutions.com/faqs.htm">number</a> <a href="http://www.diezel.ch/en/products/herbert.php">of</a> <a href="https://www.eventideaudio.com/support/downloads/eclipse-user-manual">manufacturers</a> have proposed and implemented different schemes for providing power to a device over the MIDI cable.</p>
+
+<p>There isn't much agreement on how this is implemented.  Some vendors add two extra pins, using a 7-pin connector.  Some vendors simply sip a tiny bit of current off pin 4, and some use the pins that are otherwise not used in standard.  Similarly, the voltage available differs -- it might be 5 VDC, 12 VDC, or sometimes even 12 VAC!</p>
+
+<p>Since Arduinos don't have a 12 VDC supply, the MIDI shield allows you to route 5V to the unused pins of the 5-pin DIN connector: pin 1 is tied to 5V, and pin 3 gets grounded.  This is mainly useful if you want to use a pair of MIDI shields to build a system with a subordinate device (like a MIDI enabled footpedal) that is powered by the larger system it's connected to.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/remote-power.png"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/remote-power.png" alt="Power To The Pedal" /></a> </div></p>
+
+<p>In a configuration like this, the shield on the pedal end would have the jumpers on the output closed (SJ6 and 7), and the shield on the host system end would have the input jumpers closed (SJ4 and 5).</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/cfg-power.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/cfg-power.jpg" alt="MIDI Power Jumpers" /></a> </div></p>
+
+<p>This configuration allows you to power one MIDI Shield from another, but it may not be interoperable with other gear.  Carefully consult the user manual of other devices before connecting them.  Additionally, it requires a cable that has all five pins connected.  The average MIDI cable has no connections to pins 1 and 3; sometimes MIDI cables are sold as having all five pins connected, and sometimes such a cable is simply sold as a "five pin DIN" cable.</p>
+
+<p>There are some other technical concerns when powering devices over MIDI.</p>
+
+<ul>
+<li>It's most useful when the power provider and recipient are designed as a system.  It's hard to make power over MIDI universally applicable, because you need to be able to anticipate voltage and current requirements.</li>
+<li>The original MIDI hardware implementation uses optocouplers to avoid ground loops.  Power over MIDI invites ground loop-related problems by tying the grounds of different devices together.</li>
+</ul>      </div>
+          <div class="section tutorial-page">
+        <h2 id="firmware-foundations">Firmware Foundations</h2>
+        <h3>Arduino Compatible I/O</h3>
+
+<p>The MIDI shield features the MIDI circuitry, plus a few extra input and output devices.  It has three pushbuttons, two potentiometers, and two LEDs.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/gen-controls.png"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/gen-controls.png" alt="Shield Callouts" /></a> </div></p>
+
+<p>These devices are legended with their pin assignments, and can be interfaced using standard Arduino functions.</p>
+
+<ul>
+<li>The pushbuttons are on D2, D3, and D4.  To use them, enable the corresponding pins as inputs with pullup <code>pinMode(&lt;pin number&gt;, INPUT_PULLUP);</code> and read them with <code>digitalRead(&lt;pin number&gt;);</code>.  The inputs are active low - they will normally read as a logic <code>HIGH</code>, going <code>LOW</code> while the button is pressed.</li>
+<li>The potentiometers are connected to A0 and A1.  You can read them using <code>analogRead(&lt;pin number&gt;)</code>.</li>
+<li>Finally, the LEDs are on D6 (Green) and D7 (Red).  The outputs are enabled using <code>pinMode(&lt;pin number&gt;, OUTPUT)</code>, and set using <code>digitalWrite(&lt;pin number&gt;, &lt;HIGH or LOW&gt;)</code>.  Like the buttons, these are active low -- writing HIGH turns the LED off.</li>
+</ul>
+
+<p>You can find a quick example sketch to test the buttons, pots and LEDs in the MIDI Shield <a href="https://github.com/sparkfun/MIDI_Shield/tree/V_1.5/Firmware/buttons-N-pots">GitHub Repository</a>.</p>
+
+<h3>Arduino Library Install</h3>
+
+<div class="alert alert-info"><p><b>Note:</b> This example assumes you are using the latest version of the Arduino IDE on your desktop. If this is your first time using Arduino, please review our tutorial on <a href="https://learn.sparkfun.com/tutorials/installing-arduino-ide">installing the Arduino IDE.</a> </p></div>
+
+<p>We'll be using the following libraries as the basis for the following examples.  We'll discuss some specifics of its application in each example. If you have not previously installed an Arduino library, please check out our <a href="https://learn.sparkfun.com/tutorials/installing-an-arduino-library">installation guide.</a></p>
+
+
+<div class="tile-wrap">
+  <div class="tile tutorial-tile big grid " data-id="tutorial-15">
+  <a href="https://learn.sparkfun.com/tutorials/installing-an-arduino-library">
+          <div class="thumb-wrap">
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/500-282/assets/b/e/4/b/2/50f04b99ce395fd95e000001.jpg)"></div>
+      </div>
+    
+    
+    <h3 class="title">Installing an Arduino Library</h3>
+    <div class="metaline">January 11, 2013</div>  </a>
+
+      <div class="description">
+      How do I install a custom Arduino library? It&#039;s easy! This tutorial will go over how to install an Arduino library using the Arduino Library Manager. For libraries not linked with the Arduino IDE, we will also go over manually installing an Arduino library.    </div>
+  
+  </div>
+</div>
+
+  <div class="clearfix"></div>
+
+
+<h3>Arduino MIDI Library</h3>
+
+<p>If you've read the <a href="https://learn.sparkfun.com/tutorials/midi-tutorial/implementing-midi">implementation section</a> of our MIDI tutorial, then you've seen that generating and parsing MIDI messages can be a little tricky.  Thankfully, Franky at <a href="http://fortyseveneffects.com/">Forty Seven Effects</a> has written a stable and flexible MIDI library for Arduino, which he has released under the MIT license.</p>
+
+<p>The library handles the communication aspects of MIDI, allowing you to send and receive MIDI commands.  It implements the communication layer, but it does not make any implications about how the library is applied.  It is a suitable basis for almost any type of MIDI device, from simple message filters and splitters, to complex applications like synthesizers, sequencers, and drum machines.</p>
+
+<p>The library is robust and flexible, with some well-designed features.</p>
+
+<ul>
+<li>It can use hard or soft serial ports -- you don't need to lose <code>Serial.print()</code> for debugging when you use it.</li>
+<li>It can handle MIDI in Omni mode or be set to a specific channel.</li>
+<li>You can enable a soft-thru feature, which merges incoming bytes with the output, when you don't have a hardware thru port available.</li>
+<li>It uses a object-oriented template instantion, which allows you to declare multiple MIDI ports on the same device, as you might do in a merger or splitter.</li>
+<li>You can enable or disable some more esoteric features, like sending running status and implicit note off, or using a nonstandard baud rate.</li>
+</ul>
+
+<p>You can obtain this library through the Arduino Library Manager. Do a search for "<em>midi</em>" and scroll down the results to find the "<strong>MIDI Library</strong> by <strong>Forty Seven Effects</strong>." To manually install the library, download the files from <a href="https://github.com/FortySevenEffects/arduino_midi_library">GitHub repository</a>.  Unzip them, and put the contents of the <strong>...\src</strong> folder into your Arduino library path.  On the author's PC, the library was placed in <strong>C:\Users\author\Documents\Arduino\libraries\MIDI</strong>. You can also download the repo with the link below.</p>
+
+<p><div class="center-block text-center"> <a href="https://github.com/FortySevenEffects/arduino_midi_library/archive/master.zip" class="btn btn-default">GitHub: Arduino MIDI Library (ZIP)</a> </div></p>
+
+<p>There is also extensive documentation in <a href="http://arduinomidilib.fortyseveneffects.com/">Doxygen format</a>, including several <a href="http://arduinomidilib.fortyseveneffects.com/examples.html">sample applications</a>.</p>
+
+<h3>MsTimer2 Library</h3>
+
+<p>The examples also use the MsTimer 2 library.  You can obtain this library through the Arduino Library Manager. Do a search for "<em>mstimer</em>" to find "<strong>MsTimer2</strong> by <strong>Javier Valencia</strong>." To manually install the library, download the files from <a href="https://github.com/PaulStoffregen/MsTimer2">GitHub repository</a>. You can also download the repo with the link below.</p>
+
+<p><div class="center-block text-center"> <a href="https://github.com/PaulStoffregen/MsTimer2/archive/master.zip" class="btn btn-default">GitHub: MsTimer2 Library (ZIP)</a> </div></p>      </div>
+          <div class="section tutorial-page">
+        <h2 id="example-1-clock-generator--receiver">Example #1: Clock Generator &amp; Receiver</h2>
+        <p>The first example we'll demonstrate is synchronizing multiple devices using <a href="https://learn.sparkfun.com/tutorials/midi-tutorial/messages#system_realtime">MIDI clock</a> commands.</p>
+
+<p>For this example, we'll be building two different variants of the clock code.  The first variant is the master clock, which generates periodic MIDI timing clock (0xF8) bytes, and start(0xFA), stop (0xFC), and continue (0xFB) messages.  These messages are used to transmit musical timing from one device to another, acting as a high resolution metronome.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/clock-diagram.png"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/clock-diagram.png" alt="Clock Block Diagram" /></a> </div></p>
+
+<p>The other end of the link listens for those messages and responds to them.</p>
+
+<p>For this demonstration, we'll be using a pair of RedBoards, each with a MIDI shield.  You can substitute either end of the link for a device that implements MIDI clock, as we'll show below.</p>
+
+<h3>The Firmware</h3>
+
+<p>Each of these boards gets loaded with a different sketch.  The master clock will get loaded with the  <a href="https://github.com/sparkfun/MIDI_Shield/blob/V_1.5/Firmware/clock-gen/clock-gen.ino">clock-gen.ino</a> sketch.</p>
+
+<pre style="height:250px;overflow:scroll;" data-language="language:c,c"><code>
+/******************************************************************************
+clock-gen.ino
+Use SparkFun MIDI Shield as a MIDI clock generator.
+
+Byron Jacquot, SparkFun Electronics
+October 8, 2015
+https://github.com/sparkfun/MIDI_Shield/tree/V_1.5/Firmware/clock-gen
+
+Generate MIDI clock messages at the tempo indicated by  A1.
+Send start/stop messages when D2 is pressed, and continue when D3 is pressed.
+
+Resources:
+
+  This sketch has a clock receiving counterpart in clock-recv.ino
+  
+  This code is dependent on the FortySevenEffects MIDI library for Arduino.
+  https://github.com/FortySevenEffects/arduino_midi_library
+  This was done using version 4.2, hash fb693e724508cb8a473fa0bf1915101134206c34
+  This library is now under the MIT license, as well.
+  You'll need to install that library into the Arduino IDE before compiling.
+
+
+Development environment specifics:
+  It was developed for the Arduino Uno compatible SparkFun RedBoard, with a  SparkFun
+  MIDI Shield.
+    
+  Written, compiled and loaded with Arduino 1.6.5
+
+This code is released under the [MIT License](http://opensource.org/licenses/MIT).
+
+Please review the LICENSE.md file included with this example. If you have any questions 
+or concerns with licensing, please contact techsupport@sparkfun.com.
+
+Distributed as-is; no warranty is given.
+******************************************************************************/
+
+#include <SoftwareSerial.h>
+#include <MsTimer2.h>
+#include <MIDI.h>
+
+#define PIN_LED_PLAYING 6
+#define PIN_LED_TEMPO 7
+#define PIN_PLAY_INPUT 2
+#define PIN_CONTINUE_INPUT 3
+
+#define PIN_TEMPO_POT 1
+
+static const uint16_t DEBOUNCE_COUNT = 50;
+
+//SoftwareSerial SoftSerial(8,9);
+
+/* Args: 
+   - type of port to use (hard/soft)
+   - port object name
+   - name for this midi instance
+*/
+MIDI_CREATE_INSTANCE(HardwareSerial, Serial, MIDI);
+//MIDI_CREATE_INSTANCE(SoftwareSerial, SoftSerial, MIDI);
+
+bool running;
+bool send_start;
+bool send_stop;
+bool send_continue;
+bool send_tick;
+uint32_t tempo_delay;
+
+
+void play_button_event()
+{
+  // toggle running state, 
+  // send corresponding responses
+  running = !running;
+    
+    if(running)
+    {
+      send_start = true;
+      digitalWrite(PIN_LED_PLAYING, LOW);
+    }
+    else
+    {
+      send_stop = true;
+      digitalWrite(PIN_LED_PLAYING, HIGH);
+    }
+}
+
+void cont_button_event()
+{
+  // ignore continue if running
+  if(!running)
+  {
+    send_continue = true;
+    running = true;
+    digitalWrite(PIN_LED_PLAYING, LOW);
+  }
+}
+
+void timer_callback()
+{
+  send_tick = true;
+}
+
+void check_pots()
+{
+  uint32_t pot_val;
+  uint32_t calc;
+  
+  pot_val = analogRead(PIN_TEMPO_POT);
+  
+  // Result is 10 bits
+  calc = (((0x3ff - pot_val) * 75)/1023) + 8;
+  
+  tempo_delay = calc  ;//* 5;
+}
+
+void check_buttons()
+{
+  uint8_t val;
+  static uint16_t play_debounce = 0;
+  static uint16_t cont_debounce = 0;
+
+  // First the PLAY/STOP button  
+  val = digitalRead(PIN_PLAY_INPUT);
+  
+  if(val == LOW)
+  {
+    play_debounce++;
+    
+    if(play_debounce == DEBOUNCE_COUNT)
+    {
+      play_button_event();
+    }
+  }
+  else
+  {
+    play_debounce = 0;
+  }
+
+  // Then the continue button
+  val = digitalRead(PIN_CONTINUE_INPUT);
+  
+  if(val == LOW)
+  {
+    cont_debounce++;
+    
+    if(cont_debounce == DEBOUNCE_COUNT)
+    {
+      cont_button_event();
+    }
+  }
+  else
+  {
+    cont_debounce = 0;
+  }
+
+
+
+}
+
+
+void setup() 
+{
+  // put your setup code here, to run once:
+  
+  // LED outputs
+  pinMode(PIN_LED_PLAYING, OUTPUT);
+  pinMode(PIN_LED_TEMPO, OUTPUT);
+  digitalWrite(PIN_LED_PLAYING, HIGH);
+  digitalWrite(PIN_LED_TEMPO, HIGH);
+  
+  // button inputs
+  pinMode(PIN_PLAY_INPUT, INPUT_PULLUP);
+  pinMode(PIN_CONTINUE_INPUT, INPUT_PULLUP);
+  
+//  Serial.begin(9600);
+//  Serial.println("Setting up");
+  
+//  SoftSerial.begin(31250);
+  
+  // do I need to init the soft serial port?
+  
+#if 1
+  MIDI.begin(MIDI_CHANNEL_OMNI);
+  MIDI.turnThruOff();
+#endif  
+
+  running = false;
+  send_start = false;
+  send_stop = false;
+  send_tick = false;
+
+  // prime the tempo pump
+  check_pots();
+
+//  check_timing();
+
+  MsTimer2::set(tempo_delay, timer_callback);
+  MsTimer2::start();
+
+}
+
+void loop() 
+{
+  static uint32_t loops = 0;  
+  static uint8_t  ticks = 0;
+  static uint8_t  prev_ticks = 0;
+  bool reset_timer = false;
+
+  // put your main code here, to run repeatedly:
+
+  // turn the crank...
+  MIDI.read();
+
+  // Check buttons
+  check_buttons();
+
+  // process inputs
+  if(send_start)
+  {
+    MIDI.sendRealTime(MIDI_NAMESPACE::Start);
+    send_start = false;
+//    Serial.println("Starting");
+    
+    ticks = 0;
+       
+    // Next tick comes immediately...
+    // it also resets the timer
+    send_tick = true;
+    
+  }
+  if(send_continue)
+  {
+    MIDI.sendRealTime(MIDI_NAMESPACE::Continue);
+    send_continue = false;
+//    Serial.println("continuing");
+
+    // Restore the LED blink counter
+    ticks = prev_ticks;
+    
+    // Next tick comes immediately...
+    // it also resets the timer
+    send_tick = true;
+  }
+   
+  if(send_stop)
+  {
+    MIDI.sendRealTime(MIDI_NAMESPACE::Stop);
+    send_stop = false;
+    prev_ticks = ticks ;
+//    Serial.println("Stopping");
+  }
+
+  if(send_tick)
+  {
+    MIDI.sendRealTime(MIDI_NAMESPACE::Clock);
+    send_tick = false;
+    
+    ticks++;
+    if(ticks < 6)
+    {
+      digitalWrite(PIN_LED_TEMPO, LOW);
+    }
+    else if(ticks == 6)
+    {
+      digitalWrite(PIN_LED_TEMPO, HIGH);
+    }
+    else if(ticks >= 24)
+    {
+      ticks = 0;
+    }
+    
+    check_pots();
+    
+    reset_timer = true;
+  }
+
+  if(reset_timer)
+  {      
+    MsTimer2::stop();
+    MsTimer2::set(tempo_delay, timer_callback);
+    MsTimer2::start();
+    
+    reset_timer = false;
+  }
+
+  loops++;
+}
+</code></pre>
+
+<p>The clock chasing board is loaded with the <a href="https://github.com/sparkfun/MIDI_Shield/blob/V_1.5/Firmware/clock-recv/clock-recv.ino">clock-recv.ino</a> sketch.</p>
+
+<pre style="height:250px;overflow:scroll;" data-language="language:c,c"><code>
+/******************************************************************************
+clock-recv.ino
+Use SparkFun MIDI Shield as a MIDI clock receiver.
+
+Byron Jacquot, SparkFun Electronics
+October 8, 2015
+https://github.com/sparkfun/MIDI_Shield/tree/V_1.5/Firmware/clock-recv
+
+Listenn for clock/start/stop/continue messages on the MIDI input
+
+Resources:
+
+  This sketch has a clock generating counterpart in clock-gen.ino
+
+  This code is dependent on the FortySevenEffects MIDI library for Arduino.
+  https://github.com/FortySevenEffects/arduino_midi_library
+  This was done using version 4.2, hash fb693e724508cb8a473fa0bf1915101134206c34
+  This library is now under the MIT license, as well.
+  You'll need to install that library into the Arduino IDE before compiling.
+  
+    
+Development environment specifics:
+  It was developed for the Arduino Uno compatible SparkFun RedBoard, with a  SparkFun
+  MIDI Shield.
+    
+  Written, compiled and loaded with Arduino 1.6.5
+
+This code is released under the [MIT License](http://opensource.org/licenses/MIT).
+
+Please review the LICENSE.md file included with this example. If you have any questions 
+or concerns with licensing, please contact techsupport@sparkfun.com.
+
+Distributed as-is; no warranty is given.
+******************************************************************************/
+#include <SoftwareSerial.h>
+#include <MsTimer2.h>
+#include <MIDI.h>
+
+#define PIN_LED_PLAYING 6
+#define PIN_LED_TEMPO 7
+#define PIN_PLAY_INPUT 2
+#define PIN_CONTINUE_INPUT 3
+
+#define PIN_TEMPO_POT 1
+
+static const uint16_t DEBOUNCE_COUNT = 50;
+
+//SoftwareSerial SoftSerial(8,9);
+
+/* Args: 
+   - type of port to use (hard/soft)
+   - port object name
+   - name for this midi instance
+*/
+//MIDI_CREATE_INSTANCE(SoftwareSerial, SoftSerial, MIDI);
+MIDI_CREATE_INSTANCE(HardwareSerial, Serial, MIDI);
+
+void setup() 
+{
+  // put your setup code here, to run once:
+  
+  // LED outputs
+  pinMode(PIN_LED_PLAYING, OUTPUT);
+  pinMode(PIN_LED_TEMPO, OUTPUT);
+  digitalWrite(PIN_LED_PLAYING, HIGH);
+  digitalWrite(PIN_LED_TEMPO, HIGH);
+  
+  // button inputs
+//  Serial.begin(9600);
+//  Serial.println("Setting up");
+  
+  //  SoftSerial.begin(31250);
+  // do I need to init the soft serial port?
+  // No - MIDI will do it.
+  
+#if 1
+  MIDI.begin(MIDI_CHANNEL_OMNI);
+  MIDI.turnThruOff();
+#endif  
+
+}
+
+void loop() 
+{
+  static uint32_t loops = 0;  
+  static uint8_t  ticks = 0;
+  static uint8_t  prev_ticks = 0;
+
+  // put your main code here, to run repeatedly:
+
+  // turn the crank...
+  if(  MIDI.read())
+  {
+    switch(MIDI.getType())
+    {
+      case midi::Clock :
+      { 
+        ticks++;
+
+        //Serial.print('.');
+//        Serial.println(ticks);        
+        
+        if(ticks < 6)
+        {
+          digitalWrite(PIN_LED_TEMPO, LOW);
+          //Serial.print('#');       
+        }
+        else if(ticks == 6)
+        {
+          digitalWrite(PIN_LED_TEMPO, HIGH);
+        }
+        else if(ticks >= 24)
+        {
+          ticks = 0;
+//          Serial.print('\n');
+        }
+      }
+      break;
+      
+      case midi::Start :
+      {
+        digitalWrite(PIN_LED_PLAYING, LOW);
+        ticks = 0;
+//        Serial.println("Starting");
+      }
+      break;
+
+      case midi::Stop :
+      {
+        digitalWrite(PIN_LED_PLAYING, HIGH);
+        prev_ticks = ticks;
+//        Serial.println("Stopping");
+      }
+      break;
+      case midi::Continue :
+      {
+
+        digitalWrite(PIN_LED_PLAYING, LOW);
+
+        // Restore the LED blink counter
+        ticks = prev_ticks;
+//        Serial.println("continuing");
+      }
+      break;
+      
+      default:
+      break;
+    }
+  }
+
+  loops++;
+}
+</code></pre>
+
+<h3>Controls</h3>
+
+<p>Before we test the system, lets review how the sketches use the extra I/O on the MIDI shield.</p>
+
+<p>The clock generator uses the following controls:</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/clock-gen-controls.png"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/clock-gen-controls.png" alt="Clock Generator Controls" /></a> </div></p>
+
+<ul>
+<li>The A1 pot controls the tempo.</li>
+<li>The button on D2 acts as a start/stop button.</li>
+<li>The button on D3 is a continue button</li>
+</ul>
+
+<p>The LEDs on both ends of the link serve the same functions.</p>
+
+<ul>
+<li>D7, the red LED, blinks in time, indicating the tempo.</li>
+<li>D6, the green LED, is illuminated when the system is running.</li>
+</ul>
+
+<h3>Testing</h3>
+
+<p>Once both boards are loaded, the red (D7) LED on the generator should be blinking, and the receiver should be dark.  Connect the MIDI Out of the generator to the MIDI In of the receiver, and its red LED should start blinking.  The blink rates will be the same, but they may be skewed relative to each other, not yet in perfect sync.</p>
+
+<p>Now, press the <code>play</code> button on the generator.  The green LEDs on both boards should illuminate, and the red LEDs should now blink in synch with each other.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/clk-sync.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/clk-sync.jpg" alt="2 Shields in Sync" /></a> </div></p>
+
+<p>You can adjust the A1 potentiometer to speed up and slow down the tempo.  The blink rate will change, and both units will stay in sync as it is adjusted.</p>
+
+<p>The <code>continue</code> button has some special behavior.  MIDI defines Start (0xFA) as instructing recipients to reset to the beginning of the song, then start playing.  Continue (0xFB) omits the reset, and starts from whereever it was last stopped.</p>
+
+<h3>With Other Devices</h3>
+
+<p>We can replace either end of the chain with other devices.  For purposes of demonstration, we'll be using a <a href="http://www.willzyx.com/collections/x0xb0x/products/x0xb0x-complete-black">Willzyx x0xb0x</a>, an analog synthesizer with an onboard sequencer.  The x0xb0x is connected as a receiver.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/clk-with-xox.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/clk-with-xox.jpg" alt="x0xb0x in Sync" /></a> </div></p>
+
+<p>In order for this to work, the x0xb0x needs to be configured to follow incoming clock messages -- on the x0xb0x, this is as simple as setting the mode rotary switch to <code>PATT MIDI SYNC</code>.  It follows the tempo, starts and stops properly.  However, it doesn't appear to properly obey the continue messages.</p>      </div>
+          <div class="section tutorial-page">
+        <h2 id="example-2-midi-to-control-voltage">Example #2: MIDI-to-control-voltage</h2>
+        <p>If you're interested in building a MIDI synthesizer, the MIDI Shield is quite capable.  There is an <a href="http://arduinomidilib.fortyseveneffects.com/a00012.html">example</a> in the Forty Seven Effects documentation that uses the Arduino <a href="https://www.arduino.cc/en/Reference/Tone">tone</a> library as a simple MIDI instrument.  We're going to build a little more ambitious system, that allows us to play the <a href="https://www.sparkfun.com/products/13146">Moog Werkstatt</a> with real keys.  This is useful because the Werkstatt is usually played with an array of tiny tactile switches.</p>
+
+<p>The Werkstatt is a good candidate for this project because it has a header on which it receives external control voltages.  We'll be generating the following voltages:</p>
+
+<ul>
+<li>The pitch control voltage (CV) is a DC voltage that represents which key is currently pressed.  The oscillator on the Werkstatt raises its pitch an octave for every volt present on this input; in other words, a semitone is 1/12th of a volt.</li>
+<li>The gate signal is an on/off indicator -- when one or more keys on the MIDI controller are held, the gate is high.  When no keys are pressed, the gate is low.  The Werkstatt responds to the gate by triggering the envelope generator, which in turn drives the VCF and VCA.</li>
+<li>There's a second analog control voltage from the converter that represents modulation wheel (continuous controller #0) position.  It can be patched into other inputs on the Werkstatt, such as LFO rate or filter cutoff.</li>
+</ul>
+
+<h3>Materials</h3>
+
+<p>This project requires the following parts.</p>
+
+<script src="/wish_lists/117737.js"></script>
+
+<p>It also needs a MIDI keyboard controller and a MIDI cable.</p>
+
+<h3>Construction</h3>
+
+<p>Construction and testing is a little more involved that the other two projects.</p>
+
+<p>First, we need a ground wire in the Werkstatt.  In this case, a green wire is wrapped around one of the screw posts inside and out through a gap in the front of the chassis.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/ws-ground.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/ws-ground.jpg" alt="Ground Wire" /></a> </div></p>
+
+<h4>DAC Board Assembly</h4>
+
+<p>After that, prepare the DACs, and put them on the proto shield.  The DACs come configured using the same I<sup>2</sup>C address (0x60) -- on one of the DAC breakouts, cut the traces on the pullup resistor jumper on the back of the board, and switch its address to 0x61 by switching the <code>ADDR</code> jumper to VCC.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/shield-schem.png"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/shield-schem.png" alt="DAC Block Diagram" /></a> </div></p>
+
+<p><div class="center-block text-center"> <em>Block Diagram for DAC assembly on Protoshield</em> </div></p>
+
+<p>The two DACs are soldered onto strips of breakaway headers and then onto the proto shield.  The following connections were made on the shield with wire:</p>
+
+<ul>
+<li>Their VCC pins were tied to the 5V pin.</li>
+<li>The SDA pins were tied to A4.</li>
+<li>The SCL pins were tied to A5.</li>
+<li>Longer wires were connected to the DAC outputs -- we selected a blue one, a white one, and a black one.
+
+<ul>
+<li>The white wire is the output of the DAC at the default address.</li>
+<li>The black wire is the output of the other DAC.</li>
+<li>The blue wire was connected to D10.</li>
+</ul></li>
+<li>The green ground wire from inside the Werkstatt is tied to a <code>GND</code> pin on the proto shield.</li>
+</ul>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/ws-dacs.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/ws-dacs.jpg" alt="DACs on Protoshield" /></a> </div></p>
+
+<h4>Testing the DACs</h4>
+
+<p>Once the DACs are wired onto the protoshield, put the shield on the RedBoard to test them.  Loading the <a href="https://github.com/sparkfun/MIDI_Shield/tree/V_1.5/Firmware/MIDI-CV/dac-integration-test">DAC Integration Test</a> sketch to verify that they're working.  It verifies that they're working correctly and communicating on the correct addresses by generating opposing full-scale sawtooth waves.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/TEK0005.JPG"><img src="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/TEK0005.JPG" alt="Testing Waveforms" /></a> </div></p>
+
+<h3>Connections</h3>
+
+<p>Once you're confident that the DACs are working, you can put the MIDI shield on top of the stack, and connect the Werkstatt and MIDI controller.  The MIDI controller is connected to the MIDI input on the shield.  The wires from the protoshield are connected to the Werkstatt as follows:</p>
+
+<ul>
+<li>The white wire gets plugged into the <code>VCO EXP</code> input.</li>
+<li>The black wire goes into the <code>VCF IN</code>.</li>
+<li>The blue wire is connected to the <code>GATE OUT</code> .</li>
+</ul>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/ws_keys_cv.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/ws_keys_cv.jpg" alt="With a MIDI Keyboard" /></a> </div></p>
+
+<h3>Firmware</h3>
+
+<p>The firmware for this project is a little more complex, requiring ancillary &#42;.CPP and &#42;.H files.  Get all three files from the 
+<a href="https://github.com/sparkfun/MIDI_Shield/tree/V_1.5/Firmware/MIDI-CV">GitHub folder</a> for the project, and store them in a directory named <code>MIDI-CV</code>.  When you open MIDI-CV.ino, it should also open notemap.h and .cpp.  Compile and load the sketch, then press some keys on your MIDI controller.</p>
+
+<p>This example uses a more sophisticated interface to the 47 Effects library: rather than polling the library for new messages, it installs callback routines for the relevant message categories.  It's also configured to listen in Omni mode - it should respond to messages on any MIDI channel.</p>
+
+<h3>In Operation</h3>
+
+<p>With a range of 5V to work with, the design target was to have 4 octaves of control voltage, plus roughly  +/-1/2 octave bend range.  If multiple keys are held, the CV represents the lowest note.</p>
+
+<p>The MIDI-CV sketch includes a fun bonus -- an arpeggiator!  If you hold more than one controller key at a time, the converter will periodically cycle between the keys.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/arpeg-controls.png"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/arpeg-controls.png" alt="Panel Controls" /></a> </div></p>
+
+<ul>
+<li>Button D2 enables the arpeggiator in up mode.</li>
+<li>Button D3 enables the arpeggiator in Down mode.</li>
+<li>Button D4 changes the gate to follow the arpeggiator clock.</li>
+<li>Pot A1 controls the rate of arpeggiation.</li>
+<li>The red LED (D7) displays arpeggiator tempo.</li>
+<li>The green LED (D6) illuminates when the arpeggiator is enabled.</li>
+</ul>
+
+<p>You can switch between up and down modes while the arpeggiator is running.  To disable the arpeggiator, press the button for the current mode a second time.</p>
+
+<h3>Calibration</h3>
+
+<p>The convention for control voltage is that increasing the voltage by one volt will cause the pitch to raise by an octave; 1/12th of a volt (0.08333V) corresponds to a semitone.</p>
+
+<p>The DACs are also referenced to VCC on the board, nominally 5V in this case.  Different power supplies will change the scaling of the CV -- the test unit behaved a little differently when powered from the USB connection (yielding VCC of 5.065 V) and from a 9V wall-wart supply plugged into the barrel jack (resulting in VCC of 5.008 V).  When you adjust the scaling, it's important that you're powering the system as it will be deployed!</p>
+
+<p>The intonation can be adjusted at both ends of the interface described here.  Trimpot VR5 in the Werkstatt allows for Volt-to-Octave adjustments.  In the Sketch, the constant <code>DAC_CAL</code> is also used to change the CV scaling.  Since it's adjustable at both ends, it can lead to confusion if you start adjusting them at the same time.</p>
+
+<p>The key to preventing that confusion is remembering the Volt/Octave convention. Independently adjust each end of the interface so that volts and octaves correspond.  We calibrated the system using the following procedure:</p>
+
+<ul>
+<li>First the Arduino side is calibrated to produce a 1V step for an octave between note-on messages
+
+<ul>
+<li>A DC Voltmeter was connected to the CV output of the DAC board.</li>
+<li>Ascending octaves were played on the keyboard.</li>
+<li>The <code>DAC_CAL</code> value was adjusted until those octaves resulted in 1VDC changes to the CV output.
+
+<ul>
+<li>In this case, the default value of 6826 worked fairly well.</li>
+<li>The resulting voltages were 0.483V, 1.487V, 2.485V, 3.484V, and 4.485V.</li>
+</ul></li>
+</ul></li>
+<li>Once the CV has been adjusted to 1V/8ve, VR5 in the Werkstatt can be adjusted to volt/octave response.
+
+<ul>
+<li>We used a frequency counter function in an oscilloscope to check the frequency, measured at the <code>VCO out</code> patch point.  It was  doublechecked with a digital guitar tuner.</li>
+<li>We started by hopping back and forth between low C and the next C up, then moving to higher octaves as the intonation got better.</li>
+<li>If you tune the high A to 440 Hz, working backwards to the lowest A on a 4-octave keyboard gives you 440 Hz, 220 Hz, 110 Hz and 55 Hz.</li>
+<li>The Werkstatt is most accurate in the lower registers, and tends to run a little flat in the upper registers.</li>
+<li>The tuning pot on the panel is also somewhat touchy.  While you're building this interface, you might also consider adding Moog's <a href="http://www.werkstattworkshop.com/?q=projects/fine-tune">Fine Tuning Mod</a>.</li>
+</ul></li>
+</ul>
+
+<h3>Troubleshooting</h3>
+
+<p>This project was developed using a soft serial port for MIDI and the hardware serial port to print debug messages.  Once it was working, the debug printing was disabled, and MIDI was reverted to the hardware serial port.</p>
+
+<p>If you want to enable debug printing:</p>
+
+<ol>
+<li>Start by adjusting SJ1 and SJ2 for MIDI on the soft serial pins.</li>
+<li>Amend the declaration of the MIDI instance to create and use the soft serial port.</li>
+<li>Change the <code>VERBOSE</code> macro to <code>1</code></li>
+</ol>      </div>
+          <div class="section tutorial-page">
+        <h2 id="example-3-midi-analyzer">Example #3: MIDI Analyzer</h2>
+        <p>Sometimes, when you're developing MIDI code, you want to be able to see the messages being sent on the line.  Exactly what values are being sent?  Is a byte getting lost somewhere?</p>
+
+<p>If you've got an old toaster Mac sitting around, you can use <a href="http://macgui.com/downloads/?file_id=26237">MIDI Scope</a>, or <a href="http://www.midiox.com/">MIDI Ox</a> on Windows systems.</p>
+
+<p>This example is a MIDI sniffer along those lines.  It receives MIDI messages via the library, and interprets them on the serial port.</p>
+
+<h3>Hardware Configuration</h3>
+
+<p>This sketch requires two serial ports -- one for MIDI communication, and one for printing the interpreted messages.  The shield needs to be <a href="https://learn.sparkfun.com/tutorials/midi-shield-hookup-guide/configuration#soft_serial">configured</a> to use a software serial port for the MIDI communications.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/sniffer-block-diag.png"><img src="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/sniffer-block-diag.png" alt="Sniffer Block Diagram" /></a> </div></p>
+
+<h3>The Sketch</h3>
+
+<pre style="height:250px;overflow:scroll;" data-language="language:c,c"><code>
+/******************************************************************************
+MIDI-sniffer.ino
+Use SparkFun MIDI Shield as a MIDI data analyzer.
+
+Byron Jacquot, SparkFun Electronics
+October 8, 2015
+https://github.com/sparkfun/MIDI_Shield/tree/V_1.5/Firmware/MIDI-sniffer
+
+Reads all events arriving over MIDI, and turns them into descriptive text.
+If you hold the button on D2, it will switch to display the raw hex values arriving,
+which can be useful for viewing incomplete messages and running status.
+
+Resources:
+
+Requires that the MIDI Sheild be configured to use soft serial on pins 8 & 9, 
+so that debug text can be printed to the hardware serial port.
+
+This code is dependent on the FortySevenEffects MIDI library for Arduino.
+https://github.com/FortySevenEffects/arduino_midi_library
+This was done using version 4.2, hash fb693e724508cb8a473fa0bf1915101134206c34
+This library is now under the MIT license, as well.
+You'll need to install that library into the Arduino IDE before compiling.
+
+
+Development environment specifics:
+It was developed for the Arduino Uno compatible SparkFun RedBoard, with a  SparkFun
+MIDI Shield.
+
+Written, compiled and loaded with Arduino 1.6.5
+
+This code is released under the [MIT License](http://opensource.org/licenses/MIT).
+
+Please review the LICENSE.md file included with this example. If you have any questions 
+or concerns with licensing, please contact techsupport@sparkfun.com.
+
+Distributed as-is; no warranty is given.
+******************************************************************************/
+
+
+#include <SoftwareSerial.h>
+#include <MsTimer2.h>
+#include <MIDI.h>
+
+#define PIN_RAW_INPUT 2
+
+#define PIN_POT_A0 0
+#define PIN_POT_A1 1
+
+static const uint16_t DEBOUNCE_COUNT = 50;
+
+// Need to use soft serial, so we can report what's happening
+// via messages on hard serial.
+SoftwareSerial SoftSerial(8, 9);
+
+/* Args:
+   - type of port to use (hard/soft)
+   - port object name
+   - name for this midi instance
+*/
+MIDI_CREATE_INSTANCE(SoftwareSerial, SoftSerial, MIDI);
+// This doesn't make much sense to use with hardware serial, as it needs 
+// hard serial to report what it's seeing...
+
+void setup()
+{
+  // put your setup code here, to run
+  once:
+
+  // LED outputs
+  Serial.begin(19200);
+  Serial.println("Setting up");
+
+  // do I need to init the soft serial port?
+  // No - MIDI Lib will do it.
+
+  // We want to receive messages on all channels
+  MIDI.begin(MIDI_CHANNEL_OMNI);
+  
+  // We also want to echo the input to the output, 
+  // so the sniffer can be dropped inline when things misbehave.
+  MIDI.turnThruOn();
+
+  pinMode(PIN_RAW_INPUT, INPUT_PULLUP);
+
+}
+
+void loop()
+{
+  static uint8_t  ticks = 0;
+  static uint8_t  old_ticks = 0;
+
+
+  // put your main code here, to run repeatedly:
+
+  if(digitalRead(PIN_RAW_INPUT) == LOW)
+  {
+    // If you hold button D2 on the shield, we'll print
+    // the raw hex values from the MIDI input.
+    //
+    // This can be useful if you need to troubleshoot issues with
+    // running status
+
+    byte input;
+    if(SoftSerial.available() != 0)
+    {
+      input = SoftSerial.read();
+    
+      if(input & 0x80)
+      {
+        Serial.println();
+      }
+      Serial.print(input, HEX);
+      Serial.print(' ');
+    }
+  }
+  else
+  {
+    // turn the crank...
+    if (  MIDI.read())
+    {
+      switch (MIDI.getType())
+      {
+        case midi::NoteOff :
+          {
+            Serial.print("NoteOff, chan: ");
+            Serial.print(MIDI.getChannel());
+            Serial.print(" Note#: ");
+            Serial.print(MIDI.getData1());
+            Serial.print(" Vel#: ");
+            Serial.println(MIDI.getData2());
+          }
+          break;
+        case midi::NoteOn :
+          {
+            uint8_t vel;
+
+            Serial.print("NoteOn, chan: ");
+            Serial.print(MIDI.getChannel());
+            Serial.print(" Note#: ");
+            Serial.print(MIDI.getData1());
+            Serial.print(" Vel#: ");
+            vel = MIDI.getData2();
+            Serial.print(vel);
+            if (vel == 0)
+            {
+              Serial.print(" *Implied off*");
+            }
+            Serial.println();
+          }
+          break;
+        case midi::AfterTouchPoly :
+          {
+            Serial.print("PolyAT, chan: ");
+            Serial.print(MIDI.getChannel());
+            Serial.print(" Note#: ");
+            Serial.print(MIDI.getData1());
+            Serial.print(" AT: ");
+            Serial.println(MIDI.getData2());
+          }
+          break;
+        case midi::ControlChange :
+          {
+            Serial.print("Controller, chan: ");
+            Serial.print(MIDI.getChannel());
+            Serial.print(" Controller#: ");
+            Serial.print(MIDI.getData1());
+            Serial.print(" Value: ");
+            Serial.println(MIDI.getData2());
+          }
+          break;
+        case midi::ProgramChange :
+          {
+            Serial.print("PropChange, chan: ");
+            Serial.print(MIDI.getChannel());
+            Serial.print(" program: ");
+            Serial.println(MIDI.getData1());
+          }
+          break;
+        case midi::AfterTouchChannel :
+          {
+            Serial.print("ChanAT, chan: ");
+            Serial.print(MIDI.getChannel());
+            Serial.print(" program: ");
+            Serial.println(MIDI.getData1());
+
+          }
+          break;
+        case midi::PitchBend :
+          {
+            uint16_t val;
+
+            Serial.print("Bend, chan: ");
+            Serial.print(MIDI.getChannel());
+
+            // concatenate MSB,LSB
+            // LSB is Data1
+            val = MIDI.getData2() << 7 | MIDI.getData1();
+
+            Serial.print(" value: 0x");
+            Serial.println(val, HEX);
+
+
+          }
+          break;
+        case midi::SystemExclusive :
+          {
+            // Sysex is special.
+            // could contain very long data...
+            // the data bytes form the length of the message,
+            // with data contained in array member
+            uint16_t length;
+            const uint8_t  * data_p;
+
+            Serial.print("SysEx, chan: ");
+            Serial.print(MIDI.getChannel());
+            length = MIDI.getSysExArrayLength();
+
+            Serial.print(" Data: 0x");
+            data_p = MIDI.getSysExArray();
+            for (uint16_t idx = 0; idx < length; idx++)
+            {
+              Serial.print(data_p[idx], HEX);
+              Serial.print(" 0x");
+            }
+            Serial.println();
+          }
+          break;
+        case midi::TimeCodeQuarterFrame :
+          {
+            // MTC is also special...
+            // 1 byte of data carries 3 bits of field info 
+            //      and 4 bits of data (sent as MS and LS nybbles)
+            // It takes 2 messages to send each TC field,
+          
+            Serial.print("TC 1/4Frame, type: ");
+            Serial.print(MIDI.getData1() >> 4);
+            Serial.print("Data nybble: ");
+            Serial.println(MIDI.getData1() & 0x0f);
+          }
+          break;
+        case midi::SongPosition :
+          {
+            // Data is the number of elapsed sixteenth notes into the song, set as 
+            // 7 seven-bit values, LSB, then MSB.
+          
+            Serial.print("SongPosition ");
+            Serial.println(MIDI.getData2() << 7 | MIDI.getData1());
+          }
+          break;
+        case midi::SongSelect :
+          {
+            Serial.print("SongSelect ");
+            Serial.println(MIDI.getData1());
+          }
+          break;
+        case midi::TuneRequest :
+          {
+            Serial.println("Tune Request");
+          }
+          break;
+        case midi::Clock :
+          {
+            ticks++;
+
+            Serial.print("Clock ");
+            Serial.println(ticks);
+          }
+          break;
+        case midi::Start :
+          {
+            ticks = 0;
+            Serial.println("Starting");
+          }
+          break;
+        case midi::Continue :
+          {
+            ticks = old_ticks;
+            Serial.println("continuing");
+          }
+          break;
+        case midi::Stop :
+          {
+            old_ticks = ticks;
+            Serial.println("Stopping");
+          }
+          break;
+        case midi::ActiveSensing :
+          {
+            Serial.println("ActiveSense");
+          }
+          break;
+        case midi::SystemReset :
+          {
+            Serial.println("Stopping");
+          }
+          break;
+        case midi::InvalidType :
+          {
+            Serial.println("Invalid Type");
+          }
+          break;
+        default:
+          {
+            Serial.println();
+          }
+          break;
+      }
+    }
+  }
+}
+</code></pre>
+
+<p>The library instantiation has a couple of specific details worth noting:</p>
+
+<ul>
+<li>It uses a software serial port on pins 8 and 9.  This leaves the regular serial port available for displaying the output messages.</li>
+<li>It enables the soft-thru feature of the library, so it retransmits the messages it receives.  We can insert the sniffer between two other devices without breaking the link.</li>
+</ul>
+
+<p>To use this code:</p>
+
+<ul>
+<li>Load the sketch</li>
+<li>Connect the MIDI Shield inline, between other MIDI devices</li>
+<li>Start a terminal application at 19200 baud.</li>
+<li>Send MIDI message &amp; observe the output on the terminal.</li>
+</ul>
+
+<p>This sniffer has a hidden feature: if you hold down the <code>D2</code> button on the shield, it will read and display the raw bytes from the serial port, rather than the output of the MIDI library.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/sniffer-controls.png"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/4/0/9/sniffer-controls.png" alt="Sniffer Button Callout" /></a> </div></p>
+
+<h3>In Use</h3>
+
+<p>As a test, the sniffer was connected to a MIDI keyboard, and notes were occasionally pressed and released.  In the screen capture that follows, the first few lines are shown in "cooked" format, and the next few are in "raw" format.   We learn something interesting from the raw values.</p>
+
+<p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/trace-capture.png"><img src="https://cdn.sparkfun.com/assets/learn_tutorials/4/0/9/trace-capture.png" alt="Captured Events" /></a> </div></p>
+
+<p>The first few messages are note on and off pairs for low C on the keyboard.  It turns on, it turns off.</p>
+
+<p>Then the "raw mode" button is held, and the key is pressed a few more times.  The first few articulations are somewhat rapid, the next few are a bit slower.  The display moves to a new line for each new status byte received.</p>
+
+<p>You'll notice that the rapid articulations are sent using a single status byte (0x90), followed by pairs of data bytes (0xC, 0x41, then 0xC, 0x0, etc ).  The controller is using running status to reduce the number of bytes sent, and using note on with velocity of 0 to take advantage of running status.  The next few lines in the trace are the same articulation of low C, just played more slowly.  Each articulation gets a status byte (0x90), followed by two data bytes. Even without running status, it's still using note-on with velocity of 0, instead of note-off status bytes.</p>
+
+<p>We have learned that this controller uses running status when the same message is sent in rapid succession, but sends fresh status bytes when the messages occur more slowly.  The threshold for using running status seems to be somewhere at around 1/2 of a second.</p>      </div>
+          <div class="section tutorial-page">
+        <h2 id="resources-and-going-further-">Resources and Going Further </h2>
+        <h3>Resources</h3>
+
+<ul>
+<li>If you need more detailed background information about MIDI, check out our <a href="https://learn.sparkfun.com/tutorials/midi-tutorial">MIDI Tutorial</a>.</li>
+<li>The MIDI Specification is maintained by the <a href="http://www.midi.org">MIDI Manufacturer's Organization</a>.</li>
+<li>More information about the MCP4725 digital-to-analog converter can be found in this <a href="https://learn.sparkfun.com/tutorials/mcp4725-digital-to-analog-converter-hookup-guide">hookup guide</a></li>
+</ul>
+
+<h3>Going Further</h3>
+
+<ul>
+<li>The <a href="https://www.sparkfun.com/products/13660">WAV Trigger</a> implements MIDI on it's serial port, allowing you to control up to 2048 velocity-sensitive samples.</li>
+<li>If the shield form-factor isn't right for you, we also sell the <a href="https://www.sparkfun.com/products/9536">MIDI Connector</a> all by itself.</li>
+<li>The latest revision of the <a href="https://www.sparkfun.com/products/12976">Bleep Drum</a> kit now includes a MIDI input</li>
+<li><a href="http://projectgus.github.io/hairless-midiserial/">Hairless MIDI</a> allows you to open a virtual MIDI port over a standard serial bridge (like an <a href="https://www.sparkfun.com/products/9716">FTDI adapter</a>).</li>
+</ul>      </div>
+    
+        <div class="share-link-inline">
+
+  <a class="share-link-toggle" href="#">
+    <span class="share-title">
+      <span class="sfe-icon-share"></span>
+      Share    </span>
+  </a>
+
+  <div class="share-link-inner dialog">
+    Use this URL to share:<br>
+    <input class="form-control input-sm" type="text" value="http://sfe.io/t409" onclick="$(this).trigger('select');">
+
+    <div class="share-social">
+
+      <a rel=nofollow onclick="return $(this).sfeutil('track_link',this,'Share','clicked','tumblr');" href="https://www.tumblr.com/share/link?url=http%3A%2F%2Fsfe.io%2Ft409&name=MIDI+Shield+Hookup+Guide" title="Share on Tumblr"><span class="sfe-icon-tumblr hidetext"><span>Share on Tumblr</span></span></a>
+
+      <a rel=nofollow onclick="return $(this).sfeutil('track_link',this,'Share','clicked','reddit');" href="https://www.reddit.com/submit?url=http%3A%2F%2Fsfe.io%2Ft409" title="Submit to reddit"><span class="sfe-icon-reddit hidetext"><span>Submit to reddi</span></span></a>
+
+    </div>
+
+    </div>
+  
+  <div class="share-social">
+
+    <a rel=nofollow onclick="return $(this).sfeutil('track_link',this,'Share','clicked','twitter');" href="https://twitter.com/intent/tweet?text=MIDI+Shield+Hookup+Guide&url=http%3A%2F%2Fsfe.io%2Ft409&via=sparkfun" title="Share on Twitter"><span class="sfe-icon-twitter hidetext"><span>Share on Twitter</span></span></a>
+
+    <a rel=nofollow onclick="return $(this).sfeutil('track_link',this,'Share','clicked','facebook');" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fsfe.io%2Ft409&t=MIDI+Shield+Hookup+Guide" title="Share on Facebook"><span class="sfe-icon-facebook-nobox hidetext"><span>Share on Facebook</span></span></a>
+
+          <a rel=nofollow onclick="return $(this).sfeutil('track_link',this,'Share','clicked','pinterest');" href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fsfe.io%2Ft409&media=https%3A%2F%2Fcdn.sparkfun.com%2F%2Fr%2F500-1000%2Fassets%2Flearn_tutorials%2F4%2F0%2F9%2Fproduct-in-use.jpg&description=MIDI+Shield+Hookup+Guide" title="Pin It"><span class="sfe-icon-pinterest hidetext"><span>Pin It</span></span></a>
+    
+  </div>
+
+  
+</div>
+
+  </div>
+
+  <div class="col-sm-4 nav-menu" id="nav-pages">
+    <div id="sidebar_affix">
+      <div id="tutorial-pages" class="list-group">
+        <a class="list-group-item"><b>Sections</b></a>
+                          <a data-pagename="introduction" class="list-group-item" href="#introduction">
+            Introduction          </a>
+                  <a data-pagename="assembly" class="list-group-item" href="#assembly">
+            Assembly          </a>
+                  <a data-pagename="configuration" class="list-group-item" href="#configuration">
+            Configuration          </a>
+                  <a data-pagename="firmware-foundations" class="list-group-item" href="#firmware-foundations">
+            Firmware Foundations          </a>
+                  <a data-pagename="example-1-clock-generator--receiver" class="list-group-item" href="#example-1-clock-generator--receiver">
+            Example #1: Clock Generator &amp; Receiver          </a>
+                  <a data-pagename="example-2-midi-to-control-voltage" class="list-group-item" href="#example-2-midi-to-control-voltage">
+            Example #2: MIDI-to-control-voltage          </a>
+                  <a data-pagename="example-3-midi-analyzer" class="list-group-item" href="#example-3-midi-analyzer">
+            Example #3: MIDI Analyzer          </a>
+                  <a data-pagename="resources-and-going-further-" class="list-group-item" href="#resources-and-going-further-">
+            Resources and Going Further           </a>
+              </div>
+
+      <div class="list-group">
+        <a class="list-group-item" href="https://learn.sparkfun.com/tutorials/midi-shield-hookup-guide/discuss">
+          Comments
+          <span class="badge">9</span>
+        </a>
+                  <a class="list-group-item" href="https://learn.sparkfun.com/tutorials/midi-shield-hookup-guide/introduction">
+            View Paginated
+          </a>
+                <a class="list-group-item" href="#" onclick="window.print(); return false;">
+          Print
+        </a>
+      </div>
+
+      <ul class="list-group">
+        <li class="list-group-item"><b>Tags</b></li>
+        <li class="list-group-item"><ul class="tags-list">
+  <li>
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/audio">Audio</a>  </li>
+  <li>
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/communication">Communication</a>  </li>
+  <li>
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/hookup">Hookup</a>  </li>
+</ul>
+</li>
+      </ul>
+
+      <ul class="list-group">
+        <li class="list-group-item"><b>License</b></li>
+        <li class="list-group-item">
+          <span class="sfe-icon-cc">
+            <span class="visuallyhidden">Creative Commons</span>
+          </span>
+          <small>tutorials are <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="new">CC BY-SA 4.0</a></small>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+</div>
+
+      </div> <!-- /container -->
+    </div> <!-- /content -->
+
+    <footer>
+  <div class="container">
+
+  <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="footer-col-inner">
+          <h3>About SparkFun</h3>
+          <ul>
+            <li><a href="https://www.sparkfun.com/about-sparkfun">Read Our Story</a></li>
+            <li><a href="https://www.sparkfun.com/press-and-media">Press &amp; Media</a></li>
+            <li><a href="http://www.sparkfuneducation.com" target="_blank">SparkFun Education <span class="glyphicon glyphicon-new-window"></span></a></li>
+            <li><a href="https://www.sparkfun.com/jobs">Job Openings</a></li>
+          </ul>
+
+          <h3>Partner With Us</h3>
+          <ul>
+            <li><a href="https://www.sparkfun.com/partner">See Our Partners</a></li>
+            <li><a href="https://www.sparkfun.com/services">View Our Services</a></li>
+            <li><a href="https://www.sparkfun.com/become-a-distributor">Become a Distributor/Reseller</a></li>
+            <li><a href="https://www.sparkfun.com/volume-sales">Receive Volume Discounts</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="footer-col-inner">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="https://www.sparkfun.com/support">Customer Support</a></li>
+            <li><a href="https://www.sparkfun.com/payments">Purchase Order &amp; Payment Terms</a></li>
+            <li><a href="https://www.sparkfun.com/technical-assistance">Technical Assistance</a></li>
+            <li><a href="https://www.sparkfun.com/faq">FAQs</a></li>
+          </ul>
+          <h3>Site Information</h3>
+          <ul>
+            <li><a href="https://www.sparkfun.com/terms">Terms Of Service</a></li>
+            <li><a href="https://www.sparkfun.com/privacy">Privacy Policy</a></li>
+            <li><a href="https://www.sparkfun.com/compliance">Compliance</a></li>
+            <li><a href="https://www.sparkfun.com/sitemap">Site Map</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="footer-col-inner">
+          <h3>Subscribe</h3>
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+          <script>
+            hbspt.forms.create({
+              region: "na1",
+              portalId: "2224003",
+              formId: "257ad1af-ab9e-4275-8788-cbad81cc229e"
+            });
+          </script>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="footer-col-inner">
+          <h3>View Our Social Channels</h3>
+          <ul class="spew">
+            <li><a href="https://www.youtube.com/sparkfun" target="_blank" class="icon-social-youtube"><span class="sr-only">YouTube</span></a></li>
+            <li><a href="https://www.instagram.com/sparkfun/" target="_blank" class="icon-social-instagram"><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.github.com/sparkfun" target="_blank" class="icon-social-github"><span class="sr-only">GitHub</span></a></li>
+            <li><a href="https://www.facebook.com/SparkFun" target="_blank" class="icon-social-facebook"><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://twitter.com/sparkfun" target="_blank" class="icon-social-twitter"><span class="sr-only">Twitter</span></a></li>
+            <li><a href="https://www.sparkfun.com/feeds" class="icon-social-rss"><span class="sr-only">RSS</span></a></li>
+            <li><a href="https://www.tiktok.com/@sparkfun.electronics?lang=en" target="_blank" class="icon-social-tiktok"><span class="sr-only">TikTok</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- end .row -->
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <p class="copyleft">
+          <strong>SparkFun Electronics&nbsp;&reg;</strong>
+          <span class="hidden-xs hidden-sm">/</span>
+          <br class="visible-xs-inline visible-sm-inline"/>
+          6333 Dry Creek Parkway,
+          <br class="visible-xs-inline"/>
+          Niwot, CO 80503
+        </p>
+      </div>
+    </div><!-- end .row -->
+  </div><!-- end .container -->
+</footer>
+
+      </div><!-- end .wrapper-inner -->
+    </div><!-- end .wrapper -->
+
+    <script type="text/javascript">
+      var SFECONFIG = {
+        dnt: false,
+        http_server: 'http://learn.sparkfun.com',
+        https_server: 'https://learn.sparkfun.com',
+        http_static: 'https://cdn.sparkfun.com',
+        learn_server: 'https://learn.sparkfun.com',
+        news_server: 'https://news.sparkfun.com',
+        base_url: '/',
+        url: '/',
+        controller: 'tutorials',
+        action: 'view',
+        entity_id: '',
+        auth: false,
+        sparkrev: '1782850282',
+        search_key: 'search-sngw3quge7ojic1tgr4eft5c',
+        search_url: 'https://sparkfun-electronics.ent.us-central1.gcp.cloud.es.io/api/as/v1/engines/sparkfun-01/search'
+      };
+    </script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+      <script src="/js/learn-built.min.js?sparkrev=1782850282"></script>
+    
+    <script>
+      $.sfe();
+      $.shared();
+      $('#learn').learn();
+      $('#learn').sfeutil();
+    </script>
+                            <script src="/js/tutorials-built.min.js?sparkrev=1782850282"></script>
+                                    <script>
+    var fbq = null;
+  </script>
+      
+          <script type="text/javascript">
+      (function(d,s,i,r) {
+        if (d.getElementById(i)){return;}
+        var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+        n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2224003.js';
+        e.parentNode.insertBefore(n, e);
+      })(document,"script","hs-analytics",300000);
+    </script>
+        <script type="text/javascript">
+    setTimeout(function(){var a=document.createElement("script");
+    var b=document.getElementsByTagName("script")[0];
+    a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0046/4761.js?"+Math.floor(new Date().getTime()/3600000);
+    a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+  </script>
+      </body>
+</html>
