@@ -7,6 +7,65 @@ Power over MIDI: disabled
 
 ## FILES
 
+~/C/c/patcat (main)> tree
+.
+├── include
+│   └── config.h
+├── lib
+│   ├── engine
+│   │   ├── Engine.cpp
+│   │   ├── Engine.h
+│   │   ├── Reconciler.h
+│   │   ├── Router.cpp
+│   │   ├── Router.h
+│   │   └── VoiceTable.h
+│   ├── midi
+│   │   ├── ByteSink.h
+│   │   ├── Msg.h
+│   │   ├── Parser.cpp
+│   │   ├── Parser.h
+│   │   ├── Writer.cpp
+│   │   └── Writer.h
+│   ├── panic
+│   │   ├── Panic.cpp
+│   │   └── Panic.h
+│   ├── ui
+│   │   ├── Debounce.h
+│   │   ├── LedPattern.h
+│   │   ├── Ui.cpp
+│   │   └── Ui.h
+│   └── util
+│       ├── Crc8.h
+│       ├── Ring.h
+│       └── Settings.h
+├── LICENCE.txt
+├── OUTLINE.md
+├── patcat.ino
+├── README.md
+├── reference
+│   ├── DIY USB Midi Controller With Arduino_....html
+│   ├── MIDI Shield Hookup Guide - SparkFun Learn.html
+│   ├── midi_controller_Micro_Atmega32u4_DW_v2.ino
+│   └── Midi_Shieldv15.pdf
+└── src
+    ├── hal
+    │   ├── HwSink.h
+    │   ├── Persist.cpp
+    │   ├── Persist.h
+    │   ├── Pins.cpp
+    │   └── Pins.h
+    ├── main.cpp
+    ├── mbhandleInput.cpp
+    ├── mbhandleInput.h
+    ├── mbhandleMidi.cpp
+    ├── mbhandleMidi.h
+    ├── mbpersist.cpp
+    ├── mbpersist.h
+    ├── mbsettings.cpp
+    └── mbsettings.h
+
+11 directories, 44 files
+
 .ino will just sit there for setup and serial init.
 
 ## BUTTONS
