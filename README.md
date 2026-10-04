@@ -20,7 +20,7 @@ toggle sustain on/ off - button 1, long-press: AT sustain; AT independent
  
 toggle sustain type - chord of 1 & 2: AT max; AT lock
 
-toggle note thru - button 2, long-press: AT only; AT + note thru 
+toggle note thru - button 2, long-press: AT only sent over midi; AT + note thru 
 
 toggle trigger mode - button 3, long-press: zero AT at note-on; current AT at note-on
 
