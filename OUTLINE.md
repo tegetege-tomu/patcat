@@ -6,7 +6,7 @@ MIDI jack mode: MIDI OUT
 Power over MIDI: disabled
 
 ## FILES
-
+````
 ~/C/c/patcat (main)> tree
 .
 ├── include
@@ -65,7 +65,7 @@ Power over MIDI: disabled
     └── mbsettings.h
 
 11 directories, 44 files
-
+````
 .ino will just sit there for setup and serial init.
 
 ## BUTTONS
